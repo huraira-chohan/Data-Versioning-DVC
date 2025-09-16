@@ -8,6 +8,12 @@ data = {"Name":['Huraira','Arshad','Ali'],
 
 df = pd.DataFrame(data)
 
+# adding a new row init :
+
+new_row_loc = {'Name':'Usman','Age':18,'City':'Multan'}
+df.loc[len(df.index)]=new_row_loc
+
+
 data_dir = 'data'
 os.makedirs(data_dir,exist_ok=True)
 
@@ -16,3 +22,4 @@ file_path  =  os.path.join(data_dir,'Sample Csv File')
 df.to_csv(file_path,index=False)
 
 print(f'Your file has been saved to {file_path}')
+
